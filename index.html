@@ -6,27 +6,22 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Generating motion-controllable videos through 2D and 3D bounding boxes.">
-  <meta property="og:title" content="Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion"/>
-  <meta property="og:description" content="Generating motion-controllable videos through 2D and 3D bounding boxes."/>
-  <meta property="og:url" content="https://oooolga.github.io/ctrl-v.github.io/"/>
+
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/logo.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion">
+  <meta name="twitter:title" content="Ctrl-Crash: Controllable Diffusion for Realistic Car Crashes">
   <meta name="twitter:description" content="Generating motion-controllable videos through 2D and 3D bounding boxes.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/logo.png">
-  <meta name="twitter:card" content="static/images/CtrlV_teaserv2.png">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="video generation; motion control; diffusion model; ctrl-v; bounding-box video generation; stable video diffusion; Ge Ya Luo; svd with code">
+  <meta name="keywords" content="video generation; motion control; diffusion model; car crash; counterfactual generation; autonomous driving; simulation; training; safety analysis">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion</title>
+  <title>Ctrl-Crash: Controllable Diffusion for Realistic Car Crashes</title>
   <link rel="icon" type="image/png" href="static/images/logo.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -138,41 +133,6 @@
               <!-- Paper authors -->
               <span class="author-block">anonymous</span>
             </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- ArXiv abstract Link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2406.05630v2" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv</span>
-                      </a>
-                    </span>
-
-                    <!-- Github link -->
-                  <span class="link-block">
-                      <a href="https://github.com/oooolga/Ctrl-V" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-
-                  
-                  <!-- BibTeX link -->
-                  <span class="link-block
-                  ">
-                    <a href="#BibTeX" class="button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-alt"></i>
-                      </span>
-                      <span>BibTeX</span>
-                    </a>
   
             </div>
           </div>
@@ -221,7 +181,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
-      <p>These examples illustrate scenarios involving multiple distinct crash types: <i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</i></p>
+      <p>These examples illustrate scenarios involving multiple distinct crash types: <i>[TOP] ground-truth <mark>[BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
       <video autoplay muted loop playsinline style="width:100%">
         <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
                 type="video/mp4">
@@ -264,7 +224,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
-      <p>Generating crashes from the non-accident BDD100K dataset: <i>[Left] ground-truth clips; [Right] generated crash clips</i></p>
+      <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] ground-truth clips; [Right] generated crash clips</mark>m</i></p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -324,17 +284,29 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Prediction</h2>
-      <p>We evaluate our approach using simulated intersection scenarios on NuScene data, where the <mark style="background-color: palegreen;">ego car (green)</mark> remains stationary. In the bird's eye view map, we manually place <mark style="background-color: lightcoral;"> new agents (red)</mark> crossing the intersection from left to right or right to left. These agents' bounding boxes are then projected onto the ego car's perspective. The resulting annotated data is used as input for the Box2Video network, which generates realistic video sequences.</p>
+      <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input: <i><mark>[Left] ground-truth clip, [Middle] masked bounding-box frames, [Right] Predicted crash clip.</mark></i></p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
-            <video id="birdeye_00" autoplay muted loop playsinline height="100%">
+            <video id="gt_00" autoplay muted loop playsinline height="100%">
               <source src="./static/selected_samples_may12/prediction_9_selected/64_11_08957_bframes:9_guide1:9/(1)gt_video_64_11_08957_bframes:9_guide1:9.mov"
                       type="video/mp4">
             </video>
-            <video id="birdeye_01" autoplay muted loop playsinline height="100%">
+            <video id="gt_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/153_11_03073_bframes:9_guide1:9/(1)gt_video_153_11_03073_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gt_04" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/80_10_02696_bframes:9_guide1:9/(1)gt_video_80_10_02696_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gt_02" autoplay muted loop playsinline height="100%">
               <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(1)gt_video_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gt_03" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/71_11_04685_bframes:9_guide1:9/(1)gt_video_71_11_04685_bframes:9_guide1:9.mov"
                       type="video/mp4">
             </video>
           </div>
@@ -344,17 +316,41 @@
                       type="video/mp4">
             </video>
             <video id="bbox_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/153_11_03073_bframes:9_guide1:9/(2)video_2dbboxes_153_11_03073_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="bbox_04" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/80_10_02696_bframes:9_guide1:9/(2)video_2dbboxes_80_10_02696_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="bbox_02" autoplay muted loop playsinline height="100%">
               <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(2)video_2dbboxes_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="bbox_02" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/71_11_04685_bframes:9_guide1:9/(2)video_2dbboxes_71_11_04685_bframes:9_guide1:9.mov"
                       type="video/mp4">
             </video>
           </div>
           <div class="threecolumns">
-            <video id="gen_00" autoplay muted loop playsinline height="100%">
+            <video id="pred_00" autoplay muted loop playsinline height="100%">
               <source src="./static/selected_samples_may12/prediction_9_selected/64_11_08957_bframes:9_guide1:9/(3)genvid_adv_64_11_08957_bframes:9_guide1:9.mov"
                       type="video/mp4">
             </video>
-            <video id="gen_01" autoplay muted loop playsinline height="100%">
+            <video id="pred_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/153_11_03073_bframes:9_guide1:9/(3)genvid_adv_153_11_03073_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="pred_04" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/80_10_02696_bframes:9_guide1:9/(3)genvid_adv_80_10_02696_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="pred_02" autoplay muted loop playsinline height="100%">
               <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(3)genvid_adv_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="pred_02" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/71_11_04685_bframes:9_guide1:9/(3)genvid_adv_71_11_04685_bframes:9_guide1:9.mov"
                       type="video/mp4">
             </video>
           </div>  
@@ -363,6 +359,108 @@
     </div>
   </div>
 </section> 
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Crash Reconstruction</h2>
+      <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input: <i><mark>[Left] ground-truth clip, [Middle] bounding-box frames, [Right] Predicted crash clip.</mark></i></p>
+      <!-- Tab content -->
+      <div id="BDD" class="tabcontent">
+        <div class="row"> 
+          <div class="threecolumns">
+            <video id="gt_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/92_11_90073_guide1:9/(1)gt_video_92_11_90073_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gt_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/56_11_10930_guide1_9/(1)gt_video_56_11_10930_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="threecolumns">
+            <video id="bbox_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/92_11_90073_guide1:9/(2)video_2dbboxes_92_11_90073_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="bbox_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/56_11_10930_guide1_9/(2)video_2dbboxes_56_11_10930_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="threecolumns">
+            <video id="pred_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/92_11_90073_guide1:9/genvid_92_11_90073.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gen_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/trans_selected/56_11_10930_guide1_9/genvid_56_11_10930.mov"
+                      type="video/mp4">
+            </video>
+
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Baseline Comparisons</h2>
+      <center>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="slider-item cosmos">
+          <div class="carousel-content">
+            <h3><b>
+            Cosmos
+            </b></h3>
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/comparison_selected/cosmos_diffusion-video2world-7b_48_021_crash.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="carousel-content">
+            <h3><b>
+              AVD2
+              </b></h3>
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/comparison_selected/avd2_sample1.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="carousel-content">
+            <h3><b>
+              DrivingGen
+              </b></h3>
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/comparison_selected/DrivingGen_sample3.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="carousel-content">
+            <h3><b>
+              Ctrl-Crash
+              </b></h3>
+            <video autoplay controls muted loop playsinline height="100%">
+              <source src="./static/comparison_selected/ctrl_crash_genvid_81_11_10137.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </center>
+    </div>
+  </div>
+</section>
+
 
 <!--BibTex citation -->
   <!-- <section class="section" id="BibTeX">
@@ -375,7 +473,7 @@
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
@@ -389,7 +487,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 <!-- Statcounter tracking code -->
   
