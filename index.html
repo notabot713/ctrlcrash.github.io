@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="google-site-verification" content="JGSM6XGJVjlLsyntZhXLJn7mibos9i0EBPx4Y3_SnVk" />
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Generating motion-controllable videos through 2D and 3D bounding boxes.">
+  <meta property="og:title" content="Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion"/>
+  <meta property="og:description" content="Generating motion-controllable videos through 2D and 3D bounding boxes."/>
+  <meta property="og:url" content="https://oooolga.github.io/ctrl-v.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/logo.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion">
+  <meta name="twitter:description" content="Generating motion-controllable videos through 2D and 3D bounding boxes.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/logo.png">
+  <meta name="twitter:card" content="static/images/CtrlV_teaserv2.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="video generation; motion control; diffusion model; ctrl-v; bounding-box video generation; stable video diffusion; Ge Ya Luo; svd with code">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Ctrl-V: Higher Fidelity Video Generation with Bounding-Box Controlled Object Motion</title>
+  <link rel="icon" type="image/png" href="static/images/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+.threecolumns {
+  float: left;
+  width: 33.33%;
+  padding: 0 4px;
+}
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <!-- Navbar -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Ctrl-Crash: Controllable Diffusion
+                for Realistic Car Crashes</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">anonymous</span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2406.05630v2" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+                    <!-- Github link -->
+                  <span class="link-block">
+                      <a href="https://github.com/oooolga/Ctrl-V" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  
+                  <!-- BibTeX link -->
+                  <span class="link-block
+                  ">
+                    <a href="#BibTeX" class="button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-alt"></i>
+                      </span>
+                      <span>BibTeX</span>
+                    </a>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png" alt="Ctrl_V_teaser" class="center-image" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        <mark>Counterfactual Crash Generation</mark>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video diffusion techniques have advanced significantly in recent years; however, they struggle to generate realistic car crashes due to the scarcity of accident events in most driving datasets. Given the high stakes involved in traffic accidents and their impact on human lives, we propose Ctrl-Crash to tackle the challenge of controllable car crash video generation by conditioning a diffusion model on signals such as bounding boxes, crash types, and the initial image frame. Our approach enables counterfactual scenario generation where minor variations in input can lead to dramatically different crash outcomes. To support fine-grained control at inference time, we leverage classifier-free guidance with independently tunable scales for each conditioning signal. Ctrl-Crash achieves superior performance across quantitative metrics (e.g., FVD) and qualitative visual quality compared to prior diffusion-based methods, marking a step toward more realistic and actionable driving video synthesis for autonomous vehicle simulation, training, and safety analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+<!-- Photo Grid -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
+      <p>These examples illustrate scenarios involving multiple distinct crash types: <i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</i></p>
+      <video autoplay muted loop playsinline style="width:100%">
+        <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
+                type="video/mp4">
+      </video>
+      <table class="center"> 
+        <tr> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            </td> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video> </td> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                        type="video/mp4">
+              </video></td>
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
+                        type="video/mp4">
+              </video> </td> 
+        </tr> 
+        </table>
+             <!-- <canvas id="canvas" width="320" height="1"></canvas> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
+      <p>Generating crashes from the non-accident BDD100K dataset: <i>[Left] ground-truth clips; [Right] generated crash clips</i></p>
+      <!-- Tab content -->
+      <div id="BDD" class="tabcontent">
+        <div class="row"> 
+          <div class="column">
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9/(1)gt_video_50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(1)gt_video_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(1)gt_video_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9/(1)gt_video_100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9/(1)gt_video_39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+          </div>
+          <div class="column">
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9/(3)genvid_adv_50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(3)genvid_adv_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(3)genvid_adv_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9/(3)genvid_adv_100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9/(3)genvid_adv_39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End photo grid -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Crash Prediction</h2>
+      <p>We evaluate our approach using simulated intersection scenarios on NuScene data, where the <mark style="background-color: palegreen;">ego car (green)</mark> remains stationary. In the bird's eye view map, we manually place <mark style="background-color: lightcoral;"> new agents (red)</mark> crossing the intersection from left to right or right to left. These agents' bounding boxes are then projected onto the ego car's perspective. The resulting annotated data is used as input for the Box2Video network, which generates realistic video sequences.</p>
+      <!-- Tab content -->
+      <div id="BDD" class="tabcontent">
+        <div class="row"> 
+          <div class="threecolumns">
+            <video id="birdeye_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/64_11_08957_bframes:9_guide1:9/(1)gt_video_64_11_08957_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="birdeye_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(1)gt_video_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="threecolumns">
+            <video id="bbox_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/64_11_08957_bframes:9_guide1:9/(2)video_2dbboxes_64_11_08957_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="bbox_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(2)video_2dbboxes_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="threecolumns">
+            <video id="gen_00" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/64_11_08957_bframes:9_guide1:9/(3)genvid_adv_64_11_08957_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+            <video id="gen_01" autoplay muted loop playsinline height="100%">
+              <source src="./static/selected_samples_may12/prediction_9_selected/86_11_09649_bframes:9_guide1:9/(3)genvid_adv_86_11_09649_bframes:9_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>None
+  </code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page's template was borrowed from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
