@@ -164,7 +164,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video diffusion techniques have advanced significantly in recent years; however, they struggle to generate realistic car crashes due to the scarcity of accident events in most driving datasets. Given the high stakes involved in traffic accidents and their impact on human lives, we propose Ctrl-Crash to tackle the challenge of controllable car crash video generation by conditioning a diffusion model on signals such as bounding boxes, crash types, and the initial image frame. Our approach enables counterfactual scenario generation where minor variations in input can lead to dramatically different crash outcomes. To support fine-grained control at inference time, we leverage classifier-free guidance with independently tunable scales for each conditioning signal. Ctrl-Crash achieves superior performance across quantitative metrics (e.g., FVD) and qualitative visual quality compared to prior diffusion-based methods, marking a step toward more realistic and actionable driving video synthesis for autonomous vehicle simulation, training, and safety analysis.
+            Video diffusion techniques have advanced significantly in recent years; however, they struggle to generate realistic imagery of car crashes due to the scarcity of accident events in most driving datasets. Improving traffic safety requires realistic and controllable accident simulations. To tackle the problem, we propose Ctrl-Crash, a controllable car crash video generation model that conditions on signals such as bounding boxes, crash types, and an initial image frame. Our approach enables counterfactual scenario generation where minor variations in input can lead to dramatically different crash outcomes. To support fine-grained control at inference time, we leverage classifier-free guidance with independently tunable scales for each conditioning signal. Ctrl-Crash achieves state-of-the-art performance across quantitative video quality metrics (e.g., FVD and JEDi) and qualitative measurements based on a human-evaluation of physical realism and video quality compared to prior diffusion-based methods.
           </p>
         </div>
       </div>
@@ -181,39 +181,35 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
-      <p>These examples illustrate scenarios involving multiple distinct crash types: <i>[TOP] ground-truth <mark>[BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
-      <video autoplay muted loop playsinline style="width:100%">
-        <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
-                type="video/mp4">
-      </video>
-      <table class="center"> 
-        <tr> 
-            <td><video autoplay muted loop playsinline height=80>
-                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-            </td> 
-            <td><video autoplay muted loop playsinline height=80>
-                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-            </td>
-            <td><video autoplay muted loop playsinline height=80>
-                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video> </td> 
-            <td><video autoplay muted loop playsinline height=80>
-                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
-                        type="video/mp4">
-              </video></td>
-            <td><video autoplay muted loop playsinline height=80>
-                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
-                        type="video/mp4">
-              </video> </td> 
-        </tr> 
-        </table>
-             <!-- <canvas id="canvas" width="320" height="1"></canvas> -->
-          </div>
+      <p>These examples illustrate scenarios involving multiple distinct crash types: <mark><i>[LEFT] ground-truth [RIGHT: Top to Bottom] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
+      <div class="row">
+        <div class="column" style="width: 75%;">
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="column" style="width: 25%;">
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -224,51 +220,60 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
-      <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] ground-truth clips; [Right] generated crash clips</mark>m</i></p>
+      <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] ground-truth clips; [Right] generated crash clips</mark></i></p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="column">
-            <video autoplay muted loop playsinline style="width:100%">
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(1)gt_video_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                          type="video/mp4">
+              </video>
+
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/selected_samples_may12/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(1)gt_video_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
+                          type="video/mp4">
+              </video>
+
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/selected_samples_may12/bdd_selected/100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9/(1)gt_video_100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9.mov"
+                          type="video/mp4">
+              </video>
+
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/selected_samples_may12/bdd_selected/39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9/(1)gt_video_39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9.mov"
+                          type="video/mp4">
+              </video>
+
+              <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/selected_samples_may12/bdd_selected/50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9/(1)gt_video_50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-              <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(1)gt_video_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-            <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/selected_samples_may12/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(1)gt_video_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-            <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/selected_samples_may12/bdd_selected/100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9/(1)gt_video_100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video>
-              <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/selected_samples_may12/bdd_selected/39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9/(1)gt_video_39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video>
           </div>
           <div class="column">
-            <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/selected_samples_may12/bdd_selected/50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9/(3)genvid_adv_50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9.mov"
-                        type="video/mp4">
-              </video>
+            
               <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(3)genvid_adv_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video>
-            <video autoplay muted loop playsinline style="width:100%">
+
+              <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/selected_samples_may12/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(3)genvid_adv_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video>
-            <video autoplay muted loop playsinline style="width:100%">
+
+              <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/selected_samples_may12/bdd_selected/100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9/(3)genvid_adv_100_b1f4491b-bf7d513f-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video>
+
               <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/selected_samples_may12/bdd_selected/39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9/(3)genvid_adv_39_b21d5efb-5e2cd743-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9/(3)genvid_adv_50_b200e97a-bf074435-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video>
           </div>  
@@ -480,7 +485,7 @@
         <div class="content">
 
           <p>
-            This page's template was borrowed from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page's template was borrowed from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
           </p>
 
         </div>
