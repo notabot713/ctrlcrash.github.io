@@ -181,35 +181,39 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
-      <p>These examples illustrate scenarios involving multiple distinct crash types: <mark><i>[LEFT] ground-truth [RIGHT: Top to Bottom] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
-      <div class="row">
-        <div class="column" style="width: 60%; display: flex; align-items: center; justify-content: center; padding: 2rem 0;">
-          <video autoplay muted loop playsinline style="width:100%">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="column" style="width: 40%;">
-          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline style="width:100%;">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
-                    type="video/mp4">
-          </video>
+      <p>These examples illustrate scenarios involving multiple distinct crash types: <mark><i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
+      <video autoplay muted loop playsinline style="width:60%">
+        <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
+                type="video/mp4">
+      </video>
+      <table class="center"> 
+        <tr> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            </td> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video> </td> 
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                        type="video/mp4">
+              </video></td>
+            <td><video autoplay muted loop playsinline height=80>
+                <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
+                        type="video/mp4">
+              </video> </td> 
+        </tr> 
+        </table>
+             <!-- <canvas id="canvas" width="320" height="1"></canvas> -->
+          </div>
         </div>
       </div>
     </div>
@@ -485,7 +489,7 @@
         <div class="content">
 
           <p>
-            This page's template was borrowed from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page's template was borrowed from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
           </p>
 
         </div>
