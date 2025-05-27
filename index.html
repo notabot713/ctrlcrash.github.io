@@ -165,9 +165,6 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <!-- <h2 class="title is-3">Crash Generation from Non-Crash Data</h2> -->
-      <!-- <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] ground-truth clips; [Right] generated crash clips</mark></i></p> -->
-      <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
@@ -177,19 +174,22 @@
               </video>
           </div>
           <div class="threecolumns">
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/eye_candy_clips/genvid_64_48_08386.mov"
+                          type="video/mp4">
+              </video>
+          </div>
+          <div class="threecolumns">
             <video autoplay muted loop playsinline style="width:100%">
-                <source src="static/eye_candy_clips/genvid_64_48_08386.mov"
+                <source src="static/eye_candy_clips/genvid_87_21_08924.mov"
                         type="video/mp4">
             </video>
-        </div>
-        <div class="threecolumns">
-          <video autoplay muted loop playsinline style="width:100%">
-              <source src="static/eye_candy_clips/genvid_87_21_08924.mov"
-                      type="video/mp4">
-          </video>
-      </div> 
+          </div> 
         </div>
       </div>
+      <h2 class="subtitle has-text-centered">
+        Generated Crash Clips
+      </h2>
     </div>
   </div>
 </section>
@@ -256,11 +256,15 @@
       </div>
       <table class="center"> 
         <tr> 
-            <td><video autoplay muted loop playsinline height="80px">
+            <!-- <td><video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
                         type="video/mp4">
               </video>
-            </td> 
+            </td>  -->
+            <td><video autoplay muted loop playsinline height="80px">
+              <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                      type="video/mp4">
+            </video></td>
             <td><video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
                         type="video/mp4">
@@ -270,8 +274,8 @@
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video> </td> 
-            <td><video autoplay muted loop playsinline height="80px">
-                <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+              <td><video autoplay muted loop playsinline height="80px">
+                <source src="./static/Counterfactuals_selected/genvid_55_43_05634.mov"
                         type="video/mp4">
               </video></td>
             <td><video autoplay muted loop playsinline height="80px">
@@ -543,7 +547,7 @@
         <div class="slider-item">
           <div class="carousel-content">
             <h3><b>
-              Ctrl-Crash
+              Ctrl-Crash (Ours)
               </b></h3>
             <video autoplay controls muted loop playsinline height="100%">
               <source src="./static/comparison_selected/ctrl_crash_genvid_81_11_10137.mov"
@@ -553,6 +557,7 @@
         </div>
       </div>
     </center>
+    <p>Other methods struggle to generate realistic crashes</p>
     </div>
   </div>
 </section>
