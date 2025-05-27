@@ -163,26 +163,31 @@
 
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-centered">
-        <div class="column is-4">
-          <video autoplay muted loop playsinline style="width:100%">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-4">
-          <video autoplay muted loop playsinline style="width:100%">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-4">
-          <video autoplay muted loop playsinline style="width:100%">
-            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
-                    type="video/mp4">
-          </video>
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title is-3">Crash Generation from Non-Crash Data</h2> -->
+      <!-- <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] ground-truth clips; [Right] generated crash clips</mark></i></p> -->
+      <!-- Tab content -->
+      <div id="BDD" class="tabcontent">
+        <div class="row"> 
+          <div class="column">
+              <video autoplay muted loop playsinline style="width:100%">
+                  <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(1)gt_video_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                          type="video/mp4">
+              </video>
+          </div>
+          <div class="column">
+              <video autoplay muted loop playsinline style="width:100%">
+                <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(3)genvid_adv_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+          </div>  
+          <div class="column">
+            <video autoplay muted loop playsinline style="width:100%">
+              <source src="static/selected_samples_may12/bdd_selected/61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9/(3)genvid_adv_61_b1dac7f7-6b2e0382-00_bframes:3_action:2_guide1:9.mov"
+                      type="video/mp4">
+            </video>
+        </div>  
         </div>
       </div>
     </div>
@@ -193,17 +198,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="columns is-vcentered">
-        <div class="column is-8">
-          <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="max-width: 100%; height: auto;">
-          </div>
-        </div>
-        <div class="column is-4">
-          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
+      <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="max-width: 100%; height: auto;">
+      <div class="columns is-centered" style="margin-top: 2rem;">
+        <div class="column is-6">
+          <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
                     type="video/mp4">
           </video>
+        </div>
+        <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
                     type="video/mp4">
