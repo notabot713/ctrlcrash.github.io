@@ -14,7 +14,7 @@
 
 
   <meta name="twitter:title" content="Ctrl-Crash: Controllable Diffusion for Realistic Car Crashes">
-  <meta name="twitter:description" content="Generating motion-controllable videos through 2D and 3D bounding boxes.">
+  <meta name="twitter:description" content="Generating car crash videos through controllable diffusion models.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="video generation; motion control; diffusion model; car crash; counterfactual generation; autonomous driving; simulation; training; safety analysis">
@@ -133,6 +133,25 @@
               <!-- Paper authors -->
               <span class="author-block">anonymous</span>
             </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
+              <span class="author-block">
+                <a href="https://github.com/CtrlCrash-Anonymous/Ctrl-Crash-Anonymous" target="_blank" class="button is-small is-light">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Space for additional links -->
+              <!-- <span class="author-block" style="margin-left: 0.5rem;">
+                <a href="#" target="_blank" class="button is-small is-light">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+            </div>
   
             </div>
           </div>
@@ -142,12 +161,53 @@
   </div>
 </section>
 
+<!-- Three videos eye-candy row -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-4">
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-4">
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/teaser.png" alt="Ctrl_V_teaser" class="center-image" style="max-width: 100%; height: auto;">
+      <div class="columns">
+        <div class="column is-7">
+          <img src="static/images/teaser.png" alt="Ctrl_V_teaser" class="center-image" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="column is-5">
+          <video autoplay muted loop playsinline style="width:100%; margin-bottom: 1rem;">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
+                    type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
       <h2 class="subtitle has-text-centered">
         <mark>Counterfactual Crash Generation</mark>
       </h2>
@@ -190,25 +250,25 @@
       </div>
       <table class="center"> 
         <tr> 
-            <td><video autoplay muted loop playsinline height=80>
+            <td><video autoplay muted loop playsinline style="width:20%">
                 <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
                         type="video/mp4">
               </video>
             </td> 
-            <td><video autoplay muted loop playsinline height=80>
+            <td><video autoplay muted loop playsinline style="width:20%">
                 <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
                         type="video/mp4">
               </video>
             </td>
-            <td><video autoplay muted loop playsinline height=80>
+            <td><video autoplay muted loop playsinline style="width:20%">
                 <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
               </video> </td> 
-            <td><video autoplay muted loop playsinline height=80>
+            <td><video autoplay muted loop playsinline style="width:20%">
                 <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
                         type="video/mp4">
               </video></td>
-            <td><video autoplay muted loop playsinline height=80>
+            <td><video autoplay muted loop playsinline style="width:20%">
                 <source src="./static/selected_samples_may12/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
                         type="video/mp4">
               </video> </td> 
