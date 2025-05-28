@@ -105,7 +105,7 @@
   }
 
   table, th, td {
-    border: 1px solid black;
+    border: none;
     border-collapse: collapse;
   }
 
@@ -248,13 +248,15 @@
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <!-- <p>These examples illustrate scenarios involving multiple distinct crash types: <br><mark><i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p> -->
-      <p>These examples illustrate scenarios involving multiple distinct crash types:</p>
+      <p>These examples illustrate scenarios involving multiple distinct crash types:\n</p>
       <div style="display: flex; justify-content: center; width: 100%;">
-        <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
-        <video autoplay muted loop playsinline style="width:60%">
-          <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
-                  type="video/mp4">
-        </video>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 60%;">
+          <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
+          <video autoplay muted loop playsinline style="width:100%">
+            <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
+                    type="video/mp4">
+          </video>
+        </div>
       </div>
       <table class="center"> 
         <tr> 
@@ -315,7 +317,7 @@
     <div class="container">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <!-- <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Bounding-box frames, [Right] Predicted crash clip.</mark></i></p> -->
-      <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
+      <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:\n</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -389,7 +391,7 @@
     <div class="container">
       <h2 class="title is-3">Crash Prediction</h2>
       <!-- <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Partially masked bounding-box frames, [Right] Predicted crash clip.</mark></i></p> -->
-      <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input:</p>
+      <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input:\n</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -463,7 +465,7 @@
     <div class="container">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <!-- <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] Ground-truth clips; [Right] Generated crash clips</mark></i></p> -->
-      <p>Generating crashes from the non-accident BDD100K dataset:</p>
+      <p>Generating crashes from the non-accident BDD100K dataset:\n</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -529,74 +531,6 @@
 <!-- End crash generation from non-crash data -->
 
 <!-- Baseline Comparisons -->
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Baseline Comparisons</h2>
-      <center>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="slider-item cosmos">
-          <div class="carousel-content">
-            <h3><b>
-            Cosmos (Cosmos-Predict1-7B-Video2World)
-            </b></h3>
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./static/comparison_selected/cosmos_diffusion-video2world-7b_48_021_crash.mov"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="slider-item cosmos">
-          <div class="carousel-content">
-            <h3><b>
-            Cosmos (Cosmos-Predict1-7B-Video2World NEW)
-            </b></h3>
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./static/baselines/cosmos_diffusion-video2world-7b_48_021_crash.mov"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="slider-item">
-          <div class="carousel-content">
-            <h3><b>
-              AVD2
-              </b></h3>
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./static/comparison_selected/avd2_sample1.mov"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="slider-item">
-          <div class="carousel-content">
-            <h3><b>
-              DrivingGen
-              </b></h3>
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./static/comparison_selected/DrivingGen_sample3.mov"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="slider-item">
-          <div class="carousel-content">
-            <h3><b>
-              Ctrl-Crash (Ours)
-              </b></h3>
-            <video autoplay controls muted loop playsinline height="100%">
-              <source src="./static/comparison_selected/ctrl_crash_genvid_81_11_10137.mov"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </center>
-    <p>Other methods struggle to generate realistic crashes</p>
-    </div>
-  </div>
-</section> -->
-
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
