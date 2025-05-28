@@ -256,7 +256,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
-      <p style="margin-bottom: 2rem;">These examples illustrate scenarios involving multiple distinct crash types:</p>
+      <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
         <div style="display: flex; flex-direction: column; align-items: center; width: 60%;">
           <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
@@ -398,7 +398,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Prediction</h2>
-      <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input:</p>
+      <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (frame frames indicate the bounding-boxes were masked):</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -471,7 +471,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
-      <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset:</p>
+      <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
@@ -541,6 +541,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Baseline Comparisons</h2>
+      <p style="margin-bottom: 2rem;">Other methods struggle to generate realistic crashes</p>
       <center>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="slider-item cosmos">
@@ -611,7 +612,6 @@
         </div>
       </div>
     </center>
-    <p>Other methods struggle to generate realistic crashes</p>
     </div>
   </div>
 </section>
