@@ -212,7 +212,7 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Teaser video-->
+<!-- Red car teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -239,16 +239,18 @@
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End red car teaser video -->
 
 
-<!-- Photo Grid -->
+<!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
-      <p>These examples illustrate scenarios involving multiple distinct crash types: <br><mark><i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p>
+      <!-- <p>These examples illustrate scenarios involving multiple distinct crash types: <br><mark><i>[TOP] ground-truth [BOTTOM: Left to Right] No crash, Ego-only crash, Ego-and-vehicle crash, Vehicle only crash, Vehicle-and-vehicle crash.</mark></i></p> -->
+      <p>These examples illustrate scenarios involving multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
+        <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
         <video autoplay muted loop playsinline style="width:60%">
           <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
                   type="video/mp4">
@@ -261,27 +263,41 @@
                         type="video/mp4">
               </video>
             </td>  -->
-            <td><video autoplay muted loop playsinline height="80px">
-              <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
-                      type="video/mp4">
-            </video></td>
-            <td><video autoplay muted loop playsinline height="80px">
+            <td>
+              <div style="text-align: center; margin-bottom: 5px;"><b>No Crash</b></div>
+              <video autoplay muted loop playsinline height="80px">
+                <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:3_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:3_guide1:9.mov"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div style="text-align: center; margin-bottom: 5px;"><b>Ego-Only Crash</b></div>
+              <video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:1_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:1_guide1:9.mov"
                         type="video/mp4">
               </video>
             </td>
-            <td><video autoplay muted loop playsinline height="80px">
+            <td>
+              <div style="text-align: center; margin-bottom: 5px;"><b>Ego-and-Vehicle Crash</b></div>
+              <video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:2_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
-              </video> </td> 
-            <td><video autoplay muted loop playsinline height="80px">
-              <source src="./static/Counterfactuals_selected/genvid_55_43_05634.mov"
-                      type="video/mp4">
-            </video></td>
-            <td><video autoplay muted loop playsinline height="80px">
+              </video>
+            </td>
+            <td>
+              <div style="text-align: center; margin-bottom: 5px;"><b>Vehicle Only Crash</b></div>
+              <video autoplay muted loop playsinline height="80px">
+                <source src="./static/Counterfactuals_selected/genvid_55_43_05634.mov"
+                        type="video/mp4">
+              </video>
+            </td>
+            <td>
+              <div style="text-align: center; margin-bottom: 5px;"><b>Vehicle-and-Vehicle Crash</b></div>
+              <video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634_bframes:3_action:4_guide1:9/(3)genvid_adv_56_43_05634_bframes:3_action:4_guide1:9.mov"
                         type="video/mp4">
-              </video> </td> 
+              </video>
+            </td>
         </tr> 
         </table>
              <!-- <canvas id="canvas" width="320" height="1"></canvas> -->
@@ -291,17 +307,20 @@
     </div>
   </div>
 </section> 
+<!-- End counterfactual video (truck) -->
 
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Reconstruction</h2>
-      <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Bounding-box frames, [Right] Predicted crash clip.</mark></i></p>
+      <!-- <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Bounding-box frames, [Right] Predicted crash clip.</mark></i></p> -->
+      <p>Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
+            <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth Clip</b></div>
             <video id="gt_03" autoplay muted loop playsinline height="100%">
               <source src="./static/reconstruction/93_43_90178/(1)gt_video_93_43_90178_guide1_9.mov"
                       type="video/mp4">
@@ -320,6 +339,7 @@
             </video>
           </div>
           <div class="threecolumns">
+            <div style="text-align: center; margin-bottom: 5px;"><b>Bounding-box Frames</b></div>
             <video id="bbox_03" autoplay muted loop playsinline height="100%">
               <source src="./static/reconstruction/93_43_90178/(2)video_2dbboxes_93_43_90178_guide1_9.mov"
                       type="video/mp4">
@@ -338,6 +358,7 @@
             </video>
           </div>
           <div class="threecolumns">
+            <div style="text-align: center; margin-bottom: 5px;"><b>Predicted Crash Clip</b></div>
             <video id="pred_03" autoplay muted loop playsinline height="100%">
               <source src="./static/reconstruction/93_43_90178/(3)genvid_adv_93_43_90178_guide1_9.mov"
                       type="video/mp4">
@@ -367,12 +388,13 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Prediction</h2>
-      <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Partially masked bounding-box frames, [Right] Predicted crash clip.</mark></i></p>
+      <!-- <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input: <i><mark>[Left] Ground-truth clip, [Middle] Partially masked bounding-box frames, [Right] Predicted crash clip.</mark></i></p> -->
+      <p>Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
-            
+            <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth Clip</b></div>
             <video id="gt_03" autoplay muted loop playsinline height="100%">
               <source src="./static/prediction/128_10_07870/(1)gt_video_128_10_07970_bframes-9_guide1-9.mov"
                       type="video/mp4">
@@ -391,7 +413,7 @@
             </video>
           </div>
           <div class="threecolumns">
-            
+            <div style="text-align: center; margin-bottom: 5px;"><b>Bounding-box Frames</b></div>
             <video id="bbox_03" autoplay muted loop playsinline height="100%">
               <source src="./static/prediction/128_10_07870/(2)video_2dbboxes_128_10_07970_bframes-9_guide1-9.mov"
                       type="video/mp4">
@@ -410,7 +432,7 @@
             </video>
           </div>
           <div class="threecolumns">
-            
+            <div style="text-align: center; margin-bottom: 5px;"><b>Predicted Crash Clip</b></div>
             <video id="pred_03" autoplay muted loop playsinline height="100%">
               <source src="./static/prediction/128_10_07870/genvid_128_10_07970.mov"
                       type="video/mp4">
@@ -440,11 +462,13 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
-      <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] Ground-truth clips; [Right] Generated crash clips</mark></i></p>
+      <!-- <p>Generating crashes from the non-accident BDD100K dataset: <i><mark>[Left] Ground-truth clips; [Right] Generated crash clips</mark></i></p> -->
+      <p>Generating crashes from the non-accident BDD100K dataset:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="column">
+            <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
               <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(1)gt_video_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
@@ -471,7 +495,7 @@
               </video> -->
           </div>
           <div class="column">
-
+            <div style="text-align: center; margin-bottom: 5px;"><b>Generated Crash</b></div>
               <video autoplay muted loop playsinline style="width:100%">
                 <source src="static/bdd_selected/107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9/(3)genvid_adv_107_b2505382-de5238f0-00_bframes:3_action:2_guide1:9.mov"
                         type="video/mp4">
