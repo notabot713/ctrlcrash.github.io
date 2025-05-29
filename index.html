@@ -127,6 +127,11 @@
     margin-right: auto;
     border-spacing: 0;
   }
+
+  /* Override Bulma's is-max-desktop max-width */
+  .container.is-max-desktop {
+    max-width: 1600px !important;
+  }
   </style>
 
 </head>
@@ -178,7 +183,7 @@
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
@@ -228,19 +233,19 @@
 
 <!-- Red car teaser video-->
 <section class="hero teaser">
-  <div class="container is-fluid">
+  <div class="container is-max-desktop">
     <div class="hero-body">
-      <div style="width: 100%; display: flex; justify-content: center;">
-        <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="max-width: 1400px; width: 90%; height: auto;">
+      <div style="width: 100%; max-width: 1400px; display: flex; justify-content: center;">
+        <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="hero teaser">
-  <div class="container is-fluid">
+  <div class="container is-max-desktop" style="width: 100%; max-width: 1200px;">
     <div class="hero-body">
-      <div class="columns is-centered container-width-60" style="margin-top: 2rem;">
+      <div class="columns is-centered">
         <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/teaser_clip/redcar_GT_43_90098.mov"
@@ -268,11 +273,11 @@
 <!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
-      <div style="display: flex; justify-content: center; width: 100%;">
-        <div style="display: flex; flex-direction: column; align-items: center; width: 60%; max-width: 800px;">
+      <div style="display: flex; justify-content: center; width: 100%; max-width: 800px;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
           
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/gt_video.mov"
@@ -288,8 +293,8 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
-      <table class="center" style="width: 90%; margin-left: auto; margin-right: auto;"> 
+    <div class="container is-max-desktop">
+      <table class="center"> 
         <tr> 
             <!-- <td><video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
@@ -349,7 +354,7 @@
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
@@ -422,7 +427,7 @@
 <!-- CRASH PREDICTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Prediction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (white frames indicate that the bounding-boxes were masked):</p>
       <!-- Tab content -->
@@ -495,12 +500,12 @@
 <!-- Crash generation from non-crash data -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
-        <div class="row" style="width:75%; margin-left: auto; margin-right: auto;"> 
+        <div class="row" style="max-width: 1200px;"> 
           <div class="column">
             <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
               <video autoplay muted loop playsinline style="width:100%">
@@ -565,7 +570,7 @@
 <!-- Baseline Comparisons -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 60%; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Baseline Comparisons</h2>
       <p style="margin-bottom: 2rem;">Other methods struggle to generate realistic crashes</p>
       <center>
