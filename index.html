@@ -130,7 +130,7 @@
 
   /* Override Bulma's is-max-desktop max-width */
   .container.is-max-desktop {
-    max-width: 1600px !important;
+    max-width: 1600px;
   }
   </style>
 
@@ -143,11 +143,10 @@
   <!-- Navbar -->
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-fluid">
+      <div class="container is-max-desktop" style="max-width: 800px; margin-left: auto; margin-right: auto;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">💥 Ctrl-Crash: Controllable Diffusion
-                for Realistic Car Crashes</h1>
+            <h1 class="title is-1 publication-title">💥 Ctrl-Crash: Controllable Diffusion for Realistic Car Crashes</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">anonymous</span>
@@ -183,7 +182,7 @@
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+    <div class="container is-max-desktop">
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
