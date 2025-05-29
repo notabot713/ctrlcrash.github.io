@@ -86,7 +86,7 @@
 .threecolumns {
   float: left;
   width: 33.33%;
-  padding: 0 0px;
+  padding: 0 4px;
 }
 
   .column img {
@@ -206,7 +206,7 @@
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-fluid">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -228,6 +228,13 @@
       <div style="width: 100%;">
         <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="width: 100%; height: auto;">
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
       <div class="columns is-centered" style="margin-top: 2rem;">
         <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
@@ -256,7 +263,7 @@
 <!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
@@ -268,7 +275,14 @@
           </video>
         </div>
       </div>
-      <br />
+      <!-- <br /> -->
+    </div>
+  </div>
+</section> 
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-fluid">
       <table class="center"> 
         <tr> 
             <!-- <td><video autoplay muted loop playsinline height="80px">
@@ -325,7 +339,7 @@
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
@@ -398,7 +412,7 @@
 <!-- CRASH PREDICTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Prediction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (white frames indicate that the bounding-boxes were masked):</p>
       <!-- Tab content -->
@@ -471,7 +485,7 @@
 <!-- Crash generation from non-crash data -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
@@ -633,7 +647,7 @@
 
 <!-- References -->
 <section class="section" id="references">
-  <div class="container is-fluid content">
+  <div class="container is-max-desktop content">
     <h2 class="title is-5">References</h2>
     <ol>
       <li>[1] <b>Cosmos</b> - <i>Niket Agarwal, Arslan Ali, Maciej Bala, Yogesh Balaji, Erik Barker, Tiffany Cai, Prithvijit Chattopadhyay, Yongxin Chen, Yin Cui, Yifan Ding, et al. Cosmos world foundation model platform for physical ai, 2025</i></li>
