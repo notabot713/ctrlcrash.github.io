@@ -127,6 +127,36 @@
     margin-right: auto;
     border-spacing: 0;
   }
+
+  /* Responsive container styles */
+  .container-width-80 {
+    width: 80%;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-width-60 {
+    width: 60%;
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-width-90 {
+    width: 90%;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container-width-80,
+    .container-width-60,
+    .container-width-90 {
+      width: 95%;
+    }
+  }
   </style>
 
 </head>
@@ -178,7 +208,7 @@
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-80">
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
@@ -240,7 +270,7 @@
 <section class="hero teaser">
   <div class="container is-fluid">
     <div class="hero-body">
-      <div class="columns is-centered" style="margin-top: 2rem; width: 60%; margin-left: auto; margin-right: auto;">
+      <div class="columns is-centered container-width-60" style="margin-top: 2rem;">
         <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/teaser_clip/redcar_GT_43_90098.mov"
@@ -268,7 +298,7 @@
 <!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-80">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
@@ -288,8 +318,8 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
-      <table class="center" style="width: 90%; margin-left: auto; margin-right: auto;"> 
+    <div class="container is-fluid container-width-90">
+      <table class="center"> 
         <tr> 
             <!-- <td><video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
@@ -349,7 +379,7 @@
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-80">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
@@ -422,7 +452,7 @@
 <!-- CRASH PREDICTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-80">
       <h2 class="title is-3">Crash Prediction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (white frames indicate that the bounding-boxes were masked):</p>
       <!-- Tab content -->
@@ -495,7 +525,7 @@
 <!-- Crash generation from non-crash data -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-80">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
@@ -565,7 +595,7 @@
 <!-- Baseline Comparisons -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container is-fluid" style="width: 60%; margin-left: auto; margin-right: auto;">
+    <div class="container is-fluid container-width-60">
       <h2 class="title is-3">Baseline Comparisons</h2>
       <p style="margin-bottom: 2rem;">Other methods struggle to generate realistic crashes</p>
       <center>
