@@ -173,7 +173,7 @@
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
@@ -234,16 +234,18 @@
             <source src="./static/teaser_clip/redcar_GT_43_90098.mov"
                     type="video/mp4">
           </video>
+          <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
         </div>
         <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/teaser_clip/redcar_genvid_43_90098.mov"
                     type="video/mp4">
           </video>
+          <div style="text-align: center; margin-bottom: 5px;"><b>Generated</b></div>
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        Counterfactual Crash Generation <mark><i>(Left: Ground-truth, Right: Generated)</i></mark>
+        Counterfactual Crash Generation
       </h2>
     </div>
   </div>
@@ -254,7 +256,7 @@
 <!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
@@ -323,7 +325,7 @@
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
@@ -396,7 +398,7 @@
 <!-- CRASH PREDICTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <h2 class="title is-3">Crash Prediction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (white frames indicate that the bounding-boxes were masked):</p>
       <!-- Tab content -->
@@ -469,7 +471,7 @@
 <!-- Crash generation from non-crash data -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
@@ -539,7 +541,7 @@
 <!-- Baseline Comparisons -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-fluid">
       <h2 class="title is-3">Baseline Comparisons</h2>
       <p style="margin-bottom: 2rem;">Other methods struggle to generate realistic crashes</p>
       <center>
