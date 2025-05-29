@@ -79,7 +79,7 @@
   .column {
     -ms-flex: 50%; /* IE 10 */
     flex: 50%;
-    padding: 0;
+    padding: 1px;
     margin: 0;
   }
   
@@ -87,7 +87,7 @@
 .threecolumns {
   float: left;
   width: 33.33%;
-  padding: 0;
+  padding: 1px;
   margin: 0;
 }
 
@@ -178,7 +178,7 @@
 <!-- Three videos eye-candy row -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <div id="BDD" class="tabcontent">
         <div class="row"> 
           <div class="threecolumns">
@@ -231,7 +231,7 @@
   <div class="container is-fluid">
     <div class="hero-body">
       <div style="width: 100%;">
-        <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="width: 100%; height: auto; max-width: 1400px; margin-left: auto; margin-right: auto;">
+        <img src="static/images/teaser.png" alt="Ctrl_Crash_teaser" class="center-image" style="width: 90%; margin-left: auto; margin-right: auto;">
       </div>
     </div>
   </div>
@@ -240,7 +240,7 @@
 <section class="hero teaser">
   <div class="container is-fluid">
     <div class="hero-body">
-      <div class="columns is-centered" style="margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+      <div class="columns is-centered" style="margin-top: 2rem; width: 80%; margin-left: auto; margin-right: auto;">
         <div class="column is-6">
           <video autoplay muted loop playsinline style="width:100%">
             <source src="./static/teaser_clip/redcar_GT_43_90098.mov"
@@ -268,7 +268,7 @@
 <!-- Counterfactual video (truck) -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <h2 class="title is-3">Generation of Scenarios with Varying Crash Types</h2>
       <p style="margin-bottom: 2rem;">These examples illustrate scenarios conditioned for multiple distinct crash types:</p>
       <div style="display: flex; justify-content: center; width: 100%;">
@@ -289,7 +289,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-fluid">
-      <table class="center" style="width: 80%; margin-left: auto; margin-right: auto;"> 
+      <table class="center" style="width: 90%; margin-left: auto; margin-right: auto;"> 
         <tr> 
             <!-- <td><video autoplay muted loop playsinline height="80px">
                 <source src="./static/Counterfactuals_selected/43_05634/56_43_05634/(3)genvid_adv_56_43_05634_bframes:3_action:0_guide1:9.mov"
@@ -349,12 +349,12 @@
 <!-- RECONSTRUCTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <h2 class="title is-3">Crash Reconstruction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and all bounding-box frames as input:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
-        <div class="row" style="width: 80%; margin-left: auto; margin-right: auto;"> 
+        <div class="row"> 
           <div class="threecolumns">
             <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth Clip</b></div>
             <video id="gt_03" autoplay muted loop playsinline height="100%">
@@ -422,12 +422,12 @@
 <!-- CRASH PREDICTION -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <h2 class="title is-3">Crash Prediction</h2>
       <p style="margin-bottom: 2rem;">Crash predicted by Ctrl-Crash using the initial frame and the first 9 bounding-box frames as input (white frames indicate that the bounding-boxes were masked):</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
-        <div class="row" style="width: 80%; margin-left: auto; margin-right: auto;"> 
+        <div class="row"> 
           <div class="threecolumns">
             <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth Clip</b></div>
             <video id="gt_03" autoplay muted loop playsinline height="100%">
@@ -495,12 +495,12 @@
 <!-- Crash generation from non-crash data -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <h2 class="title is-3">Crash Generation from Non-Crash Data</h2>
       <p style="margin-bottom: 2rem;">Generating crashes from the non-accident BDD100K dataset by conditioning on the initial frame and the first 9 bounding-box frames:</p>
       <!-- Tab content -->
       <div id="BDD" class="tabcontent">
-        <div class="row" style="width:60%; margin-left: auto; margin-right: auto;"> 
+        <div class="row" style="width:75%; margin-left: auto; margin-right: auto;"> 
           <div class="column">
             <div style="text-align: center; margin-bottom: 5px;"><b>Ground-truth</b></div>
               <video autoplay muted loop playsinline style="width:100%">
@@ -565,7 +565,7 @@
 <!-- Baseline Comparisons -->
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container is-fluid">
+    <div class="container is-fluid" style="width: 80%; margin-left: auto; margin-right: auto;">
       <h2 class="title is-3">Baseline Comparisons</h2>
       <p style="margin-bottom: 2rem;">Other methods struggle to generate realistic crashes</p>
       <center>
